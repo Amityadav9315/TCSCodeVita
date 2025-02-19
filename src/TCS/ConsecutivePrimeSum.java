@@ -9,9 +9,10 @@ public class ConsecutivePrimeSum{
 
             int count1=1;
             int count2=0;
+            int count3=0;
             int sum=0;
-            for(int i=2; i<n; i++){
-                for(int j=2; j<n; j++){
+            for(int i=2; i<=n; i++){
+                for(int j=2; j<=n; j++){
                     if(i%j==0){
                         count1++;
 
@@ -23,23 +24,21 @@ public class ConsecutivePrimeSum{
 
 
                 }
-                for(int k=2; k<n; k++){
+                for(int k=2; k<=n; k++){
                     if(sum%k==0){
                         count2++;
                     }
 
+                    }
+                if(count2==1){
+                    count3++;
+
                 }
 
 
                 }
-            System.out.println(count2);
+            System.out.println(count3);
             }
-
-
-
-
-
-
 
         public static void main(String[] args) {
             Scanner sc=new Scanner(System.in);
