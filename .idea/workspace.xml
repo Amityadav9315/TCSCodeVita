@@ -35,6 +35,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Codechef.executor": "Run",
     "Application.ConsecutivePrimeSum.executor": "Run",
     "Application.CountRock.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
