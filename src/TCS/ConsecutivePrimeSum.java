@@ -1,55 +1,55 @@
 package TCS;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class ConsecutivePrimeSum{
-
-        static void primeSum(int n){
+class ConsecutivePrimeSum {
 
 
-            int count1=1;
-            int count2=0;
-            int count3=0;
-            int sum=0;
-            for(int i=2; i<=n; i++){
-                for(int j=2; j<=n; j++){
-                    if(i%j==0){
-                        count1++;
+    static boolean[] sieveOfEratosthenes(int n) {
+        boolean[] isPrime = new boolean[n + 1];
+        Arrays.fill(isPrime, true);
+        isPrime[0] = isPrime[1] = false;
 
-                    }
-
-                    }
-                if(count1==2){
-                    sum=sum+i;
-
-
+        for (int i = 2; i * i <= n; i++) {
+            if (isPrime[i]) {
+                for (int j = i * i; j <= n; j += i) {
+                    isPrime[j] = false;
                 }
-                for(int k=2; k<=n; k++){
-                    if(sum%k==0){
-                        count2++;
-                    }
-
-                    }
-                if(count2==1){
-                    count3++;
-
-                }
-
-
-                }
-            System.out.println(count3);
             }
+        }
+        return isPrime;
+    }
+    static int countConsecutivePrimeSums(int n) {
+        boolean[] isPrime = sieveOfEratosthenes(n);
 
-        public static void main(String[] args) {
-            Scanner sc=new Scanner(System.in);
-            int n=sc.nextInt();
-            primeSum(n);
-
-
+        List<Integer> primes = new ArrayList<>();
+        for (int i = 2; i <= n; i++) {
+            if (isPrime[i]) {
+                primes.add(i);
+            }
         }
 
+        int count = 0;
+        int sum = 2;
 
+
+        for (int i = 1; i < primes.size(); i++) {
+            sum += primes.get(i);
+            if (sum > n) {
+                break;
+            }
+            if (isPrime[sum]) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
-
-
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int result = countConsecutivePrimeSums(n);
+        System.out.println(result);
+    }
+}
