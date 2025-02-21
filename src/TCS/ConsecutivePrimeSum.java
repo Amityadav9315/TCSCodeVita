@@ -14,6 +14,7 @@ class ConsecutivePrimeSum {
             if (isPrime[i]) {
                 for (int j = i * i; j <= n; j += i) {
                     isPrime[j] = false;
+                    System.out.println();
                 }
             }
         }
