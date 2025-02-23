@@ -27,12 +27,8 @@ public class ManeuveringACave {
                 while(e>1){
                     sum2=sum2*(e-1);
                     e--;
-
                 }
                 int den=sum1*sum2;
-
-
-
                 int path=sum/den;
                 System.out.println(path);
             }
