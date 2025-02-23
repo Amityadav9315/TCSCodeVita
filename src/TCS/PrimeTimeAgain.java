@@ -31,7 +31,9 @@ public class PrimeTimeAgain {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
+        System.out.println("Enter no of hour per day");
         int d=sc.nextInt();
+        System.out.println("Enter no of parts in a day");
         int p=sc.nextInt();
         primeTimeagain(d,p);
 
