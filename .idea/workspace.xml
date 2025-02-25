@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccaf0095-ceb0-4ef1-913a-e151e0db4604" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/TCS/MinGift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TCS/MinGift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,8 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/JAVA CODE/CodeVita",
-    "onboarding.tips.debug.path": "C:/Users/amit9/Downloads/journalApp/CodeVita/src/Main.java"
+    "onboarding.tips.debug.path": "C:/Users/amit9/Downloads/journalApp/CodeVita/src/Main.java",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
