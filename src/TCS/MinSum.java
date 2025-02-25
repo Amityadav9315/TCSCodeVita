@@ -17,25 +17,22 @@ public class MinSum {
             }
             for(int j=0; j<k;  j++){
                 max=max/2;
-                arr[i]=max;
+                array2[i]=max;
             }
 
 
         }
 
         for(int i=k; i<n; i++){
-            arr[i]=array2[i];
+            array2[i]=arr[i];
         }
         int sum=0;
         for(int i=0; i<n; i++){
             sum=sum+array2[i];
 
         }
+        System.out.println(sum);
 
-
-        for(int x:array2){
-            System.out.println(x);
-        }
 
     }
 
