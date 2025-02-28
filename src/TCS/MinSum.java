@@ -22,6 +22,8 @@ public class MinSum {
 
 
         }
+
+        System.out.println();
         System.out.println();
         for(int i=k; i<n; i++){
             array2[i]=arr[i];
