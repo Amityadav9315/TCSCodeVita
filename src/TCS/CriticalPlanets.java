@@ -1,32 +1,76 @@
-package TCS;
+import java.util.*;
+import java.io.*;
 
-import java.util.Scanner;
+class CriticalPlanets {
+    static ArrayList<Integer>[] adj;
+    static int[] visited;
+    static int[] in;
+    static int[] low;
+    static int timer;
+    static Set<Integer> criticalPlanets;
 
-public class CriticalPlanets {
+    public static void dfs(int node, int parent) {
+        visited[node] = 1;
+        in[node] = low[node] = timer++;
 
+        for (int neighbour : adj[node]) {
+            if (neighbour == parent) continue;
 
-    static void criticalPlanets(){
+            if (visited[neighbour] == 1) {
+                low[node] = Math.min(low[node], in[neighbour]);
+            } else {
+                dfs(neighbour, node);
 
+                if (low[neighbour] > in[node]) {
+                    criticalPlanets.add(node);
+                    criticalPlanets.add(neighbour);
+                }
 
-
-    }
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int m=sc.nextInt();
-        int n=sc.nextInt();
-        int[] arr=new int[2*m];
-        for(int i=0; i<2*m; i++ ) {
-            arr[i]=sc.nextInt();
-
+                low[node] = Math.min(low[node], low[neighbour]);
+            }
         }
-        for(int i=0; i<2*m; i++){
-            if(arr[i]==arr[i+2]){
+    }
 
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+        int m = sc.nextInt();
+        int n = sc.nextInt();
+
+        adj = new ArrayList[n];
+        for (int i = 0; i < n; i++) {
+            adj[i] = new ArrayList<>();
+        }
+
+        for (int i = 0; i < m; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            if (a < n && b < n) { // Check if the input is within bounds
+                adj[a].add(b);
+                adj[b].add(a);
+            } else {
+                System.out.println("Invalid input");
+                return;
             }
         }
 
+        visited = new int[n];
+        in = new int[n];
+        low = new int[n];
+        criticalPlanets = new TreeSet<>();
+        timer = 0;
 
+        for (int i = 0; i < n; i++) {
+            if (visited[i] == 0) {
+                dfs(i, -1);
+            }
+        }
 
-
+        if (criticalPlanets.isEmpty()) {
+            System.out.println(-1);
+        } else {
+            for (int planet : criticalPlanets) {
+                System.out.println(planet);
+            }
+        }
     }
 }
