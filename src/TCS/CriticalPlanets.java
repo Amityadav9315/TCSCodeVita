@@ -14,6 +14,13 @@ public class CriticalPlanets {
         Scanner sc=new Scanner(System.in);
         int m=sc.nextInt();
         int n=sc.nextInt();
+        for(int i=0; i<m; i++ ){
+            int a=sc.nextInt();
+            int b=sc.nextInt();
+
+        }
+
+
 
 
     }
