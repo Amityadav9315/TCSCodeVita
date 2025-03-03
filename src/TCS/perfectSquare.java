@@ -10,7 +10,7 @@ public class perfectSquare {
     static void PerfectSquare(int n){
         int count=0;
         for(int i=1; i<n; i++){
-            if(n%i==i){
+            if(n/i==i){
                 count=1;
 
             }
@@ -19,7 +19,7 @@ public class perfectSquare {
             System.out.println("Perfect square");
         }
         else{
-            System.out.println("Not Prime Number");
+            System.out.println("Not perfect Square");
         }
 
 
