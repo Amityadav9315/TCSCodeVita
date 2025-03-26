@@ -4,17 +4,14 @@ import java.util.Scanner;
 
 public class  FindFrequency {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of elements: ");
-        int n = scanner.nextInt();
-
+        int n = sc.nextInt();
         int[] numbers = new int[n];
         System.out.println("Enter the numbers:");
-
-
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < n; i++) {
-            numbers[i] = scanner.nextInt();
+            numbers[i] = sc.nextInt();
             if (numbers[i] > max) {
                 max = numbers[i];
             }
@@ -33,6 +30,7 @@ public class  FindFrequency {
             }
         }
 
-        scanner.close();
+        sc.close();
+        System.out.println();
     }
 }
