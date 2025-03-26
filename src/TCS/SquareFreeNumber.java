@@ -1,6 +1,8 @@
+package TCS;
+
 import java.util.*;
 
-class Codechef {
+class SquareFreeNumber {
     // Function to check if a number is square-free
     static boolean isSquareFree(int num) {
         // Check for squares of primes <= 19 (since no prime larger than 19 divides N)
