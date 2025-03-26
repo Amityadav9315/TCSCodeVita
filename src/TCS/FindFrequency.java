@@ -12,6 +12,8 @@ public class FindFrequency {
             if(arr[i]==arr[j]){
                 visited=1;
             }
+
+
         }
 
 
